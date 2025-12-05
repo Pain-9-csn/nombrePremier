@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Nombre premier simple</title>
+</head>
+<body>
+
+<h2>Vérifier si un nombre est premier</h2>
+
+<input type="number" id="num" placeholder="Entrez un nombre">
+<button onclick="verifier()">Vérifier</button>
+
+<p id="result"></p>
+
+<script>
+function verifier() {
+    let n = document.getElementById("num").value * 1; // conversion simple
+
+    if (n < 2 || n !== n) {  // <2 ou NaN
+        document.getElementById("result").textContent = "Ce n'est pas un nombre premier.";
+        return;
+    }
+
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) {
+            document.getElementById("result").textContent = n + " n'est pas premier.";
+            return;
+        }
+    }
+
+    document.getElementById("result").textContent = n + " est premier.";
+}
+</script>
+
+</body>
+</html>
