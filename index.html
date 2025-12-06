@@ -2,16 +2,71 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Nombre premier simple</title>
+<title>Nombre premier</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        width: 300px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007BFF;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #result {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #333;
+    }
+</style>
 </head>
 <body>
 
-<h2>Vérifier si un nombre est premier</h2>
-
-<input type="number" id="num" placeholder="Entrez un nombre">
-<button onclick="verifier()">Vérifier</button>
-
-<p id="result"></p>
+<div class="container">
+    <h2>Vérifier un nombre premier</h2>
+    <input type="number" id="num" placeholder="Entrez un nombre">
+    <button onclick="verifier()">Vérifier</button>
+    <div id="result"></div>
+</div>
 
 <script>
 function verifier() {
